@@ -84,7 +84,7 @@ export default function Component() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -50 }}
             transition={{ duration: 0.3 }}
-            className="absolute top-16 flex p-8 left-0 right-0 w-full m-4 rounded-lg bg-slate-50 text-black z-50 md:hidden"
+            className="absolute top-16 flex p-5 left-0 right-0 w-full m-4 rounded-lg bg-slate-50 text-black z-50 md:hidden"
           >
             <div className="flex flex-col items-start py-4 space-y-4">
               {links.map(
