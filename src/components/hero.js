@@ -31,7 +31,7 @@ export default function Component() {
   return (
     <div className="relative min-h-screen bg-cover bg-[url('/assets/hero-photo.jpg')] text-white overflow-hidden">
       {/* Navigation Bar */}
-      <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4">
+      <nav className="max-w-[800px] mx-auto absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4">
         <Link href="/" className="text-2xl font-bold tracking-wider">
           <Image
             className="w-11 h-11 bg-white rounded-full"
@@ -40,7 +40,7 @@ export default function Component() {
           />
         </Link>
 
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center font-medium space-x-8 sm:text-lg">
           <Link href="/" className="hover:text-primary">
             Home
           </Link>
@@ -124,7 +124,7 @@ export default function Component() {
         </motion.div>
 
         {/* Content */}
-        <div className="relative h-full flex flex-col items-center justify-center text-center px-4 py-8 sm:py-0">
+        <div className="relative h-full max-w-[1000px] mx-auto flex flex-col items-center justify-center text-center px-4 py-8 sm:py-0">
           <motion.h1
             key={currentSlide}
             initial={{ opacity: 0, y: 20 }}
@@ -144,7 +144,7 @@ export default function Component() {
           >
             {slides[currentSlide].subtitle}
           </motion.p>
-          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+          <div className="flex flex-col justify-center items-center sm:flex-row gap-4 w-full sm:w-auto">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button className="bg-[#c4f135] shadow-[0_0px_10px_2px_#c4f135] max-w-36 p-4 rounded-full text-black hover:bg-[#b3df2d] w-full sm:w-auto text-xs sm:text-sm md:text-base tracking-wider font-bold">
                 START NOW
@@ -153,7 +153,7 @@ export default function Component() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <button
                 variant="outline"
-                className="border-white text-white flex justify-center items-center gap-2 hover:text-[#b3df2d] w-full sm:w-auto text-base tracking-widest sm:text-sm md:text-base"
+                className="border-white text-white flex justify-center items-center gap-1 hover:text-[#b3df2d] w-full sm:w-auto text-base tracking-widest sm:text-sm md:text-base"
               >
                 LEARN MORE <ArrowUpRight />
               </button>
@@ -167,9 +167,9 @@ export default function Component() {
                 variant="ghost"
                 size="icon"
                 onClick={prevSlide}
-                className="rounded-full hover:bg-white/20"
+                className="border rounded-full hover:bg-white/20"
               >
-                <ChevronLeft className="h-6 w-6" />
+                <ChevronLeft className="h-7 w-7" />
               </button>
             </motion.div>
             <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
@@ -177,9 +177,9 @@ export default function Component() {
                 variant="ghost"
                 size="icon"
                 onClick={nextSlide}
-                className="rounded-full hover:bg-white/20"
+                className="border rounded-full hover:bg-white/20"
               >
-                <ChevronRight className="h-6 w-6" />
+                <ChevronRight className="h-7 w-7" />
               </button>
             </motion.div>
           </div>
